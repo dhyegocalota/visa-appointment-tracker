@@ -1,0 +1,41 @@
+{
+  "name": "Visa Appointment Tracker",
+  "repository": "https://github.com/dhyegocalota/visa-appointment-tracker",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "jontewks/puppeteer"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "required": true
+    },
+    "VISA_CREDENTIALS_EMAIL": {
+      "required": true
+    },
+    "VISA_CREDENTIALS_PASSWORD": {
+      "required": true
+    },
+    "TWILIO_ACCOUNT_SID": {
+      "required": true
+    },
+    "TWILIO_AUTH_TOKEN": {
+      "required": true
+    },
+    "TWILIO_CALLER_NUMBER": {
+      "required": true
+    },
+    "TWILIO_RECEIVER_NUMBER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  }
+}
