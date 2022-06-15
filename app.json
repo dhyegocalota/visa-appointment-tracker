@@ -30,6 +30,9 @@
     },
     "TWILIO_RECEIVER_NUMBER": {
       "required": true
+    },
+    "GET_CITIES_WORKFLOW_CRON_EXPRESSION": {
+      "required": true
     }
   },
   "formation": {

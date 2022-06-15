@@ -12,6 +12,7 @@ declare var process: {
     TWILIO_AUTH_TOKEN: string;
     TWILIO_CALLER_NUMBER: string;
     TWILIO_RECEIVER_NUMBER: string;
+    GET_CITIES_WORKFLOW_CRON_EXPRESSION: string;
   };
 };
 
@@ -24,5 +25,6 @@ export default function buildConfigFromEnv(): Config {
     twilioAuthToken: process.env.TWILIO_AUTH_TOKEN,
     twilioCallerNumber: process.env.TWILIO_CALLER_NUMBER,
     twilioReceiverNumber: process.env.TWILIO_RECEIVER_NUMBER,
+    getCitiesWorkflowCronExpression: process.env.GET_CITIES_WORKFLOW_CRON_EXPRESSION,
   };
 }

@@ -23,6 +23,6 @@ export default class GetCitiesWorkflow extends Workflow {
   }
 
   public buildCronExpression(): string {
-    return '* * * * *';
+    return this.config.getCitiesWorkflowCronExpression;
   }
 }

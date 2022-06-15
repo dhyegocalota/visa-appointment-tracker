@@ -8,4 +8,5 @@ export type Config = {
   twilioAuthToken: string;
   twilioCallerNumber: string;
   twilioReceiverNumber: string;
+  getCitiesWorkflowCronExpression: string;
 };
