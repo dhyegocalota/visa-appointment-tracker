@@ -1,0 +1,37 @@
+{
+  "name": "Visa Appointment Tracker",
+  "repository": "https://github.com/dhyegocalota/visa-appointment-tracker",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "jontewks/puppeteer"
+    }
+  ],
+  "addons": ["papertrail:choklad", "rollbar:trial-5k"],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment can be set to `development` or `production`.",
+      "value": "production"
+    },
+    "VERBOSE": {
+      "description": "Enable detailed logs. Can be set to `true` or `false`.",
+      "value": "false"
+    },
+    "DEFAULT_PUPPETEER_TIMEOUT": {
+      "description": "Default timeout in ms of the Puppeteer library.",
+      "value": "5000"
+    },
+    "GET_AVAILABLE_APPOINTMENT_CONSULATES_WORKFLOW_CONFIG_IN_JSON": {
+      "description": "Serialized JSON Config of the GetAvailableAppointmentConsulates Workflow.",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  }
+}
