@@ -29,7 +29,7 @@
     }
   },
   "formation": {
-    "web": {
+    "cron": {
       "quantity": 1,
       "size": "hobby"
     }
