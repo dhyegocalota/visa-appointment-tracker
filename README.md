@@ -15,7 +15,8 @@ This app is useful for you that scheduled your US Visa interview but you'd like 
 ## Prerequisites
 1. Install `Node >=18.0.0`
 2. Create a Twilio account with phone calls enabled
-    - Notice that a [Twilio's Free-trial](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account) plan tier may fulfill this app needs
+    - Notice that a [Twilio's Free-trial](https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account) plan tier may fulfill your  needs
+    - Twilio's Free-trial tier provides a Caller number and let you configure your existing phone number as the Receiver
 3. Make sure to have access to your [US Visa Info's](https://ais.usvisa-info.com/) account
 4. Get the US Visa Info's Group ID [[See]](#how-to-get-us-visa-infos-group-id)
 
