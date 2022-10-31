@@ -5,12 +5,20 @@ Available schedule dates for US Visa interviews may get very competetive. The wa
 
 Scheduling dates become available due to different reasons such as people that give up or that reschedule their appointments. New available scheduling dates might not last more than a few minutes or hours depending on the region you're scheduling your US Visa interview.
 
-This app is useful for you that scheduled your US Visa interview but you'd like to change the appointment date. This app is designed to track available scheduling dates of your preference. It watchs for scheduling dates that become available and notifies ASAP by making a call through the Twillio API.
+## How is this app useful?
+This app is useful for you that already scheduled your US Visa interview but you'd like to change the appointment to a sooner date. This app is designed to track available scheduling dates of your preference. It watchs for scheduling dates that become available and notifies ASAP by making a call through the Twillio API.
 
 *This app isn't meant to automatically schedule or change appointments but only to notify when available dates according to your settings get vacant.*
 
 > This is a hobby project that was born due to a need of finding a closer upcoming appointment date for my US Visa interview. I hope that it can help other people finding vacant dates according to their preferences as soon as they get available in the US System. 
 > — <cite>Dhyego Calota, Author</cite>
+
+## Important Disclosure
+This app is not stable nor production-ready. It deeply relies on the Routing and HTML pages structure of the US Visa system. This app might break on noticeably changes made in the US Visa system.
+
+We aren't constantly monitoring this app health.
+
+Feel free to open [an Issue](https://github.com/dhyegocalota/visa-appointment-tracker/issues/new) in case of the app misbehave.
 
 ## Prerequisites
 1. Install `Node >=18.0.0`
@@ -21,15 +29,18 @@ This app is useful for you that scheduled your US Visa interview but you'd like 
 4. Get the US Visa Info's Group ID [[See]](#how-to-get-us-visa-infos-group-id)
 
 ### How to Get US Visa Info's Group ID
-You can get your Group ID by accessing the dashboard's homepage. Extract the Group ID from the homepage URL.
+1. Access the [US Visa Info's](https://ais.usvisa-info.com/) system
+2. Sign in
+3. Click on the Group
+4. Extract the Group ID from the URL
 
-`https://ais.usvisa-info.com/{lang}/niv/groups/{group_id}`
+`https://ais.usvisa-info.com/{location}/niv/schedule/{group-id}/continue_actions`
 
 For example, given the URL:
 
-`https://ais.usvisa-info.com/pt-br/niv/groups/26310047`
+`https://ais.usvisa-info.com/pt-br/niv/schedule/84746362/continue_actions`
 
-The Group ID is: `26310047`
+The Group ID is: `44257493`
 
 ## Setup
 1. Complete [Prerequisites](#prerequisites)
