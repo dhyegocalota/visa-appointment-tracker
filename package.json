@@ -10,7 +10,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "serve": "nodemon --watch './' --exec 'ts-node -r tsconfig-paths/register --files ./src/bin/cron.ts' -e ts",
+    "serve": "NODE_ENV=development nodemon --watch './' --exec 'ts-node -r tsconfig-paths/register --files ./src/bin/cron.ts' -e ts",
     "start": "pm2-runtime start ./dist/bin/cron.js --env production",
     "build": "ttsc"
   },

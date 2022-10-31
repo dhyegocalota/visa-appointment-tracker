@@ -167,6 +167,18 @@ All kinds of contributions or constructive usage feedbacks are encouraged. Pleas
 
 We'll do our best to review new Issues and Pull Requests ASAP.
 
+## Debug Mode
+You can run this app in Debug Mode in your local machine.
+
+1. Set the environment variable `VERBOSE=true`
+2. Run the app using `yarn serve`
+
+This mode will enable the following:
+
+- The app will log in verbose mode
+- The app will use Chromium instead of a headless browser
+- The app will execute the workflow whenever changes are made to the codebase rather than using cron
+
 ## Author
 Dhyego Calota <dhyegofernando@gmail.com>
 
