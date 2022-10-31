@@ -11,8 +11,8 @@ export default class NavigateToGroupAppointmentWorkflowCommand extends WorkflowC
   }
 
   async retryableExecute(): Promise<void> {
-    const { visaGroupId } = this.config.workflows.getAvailableAppointmentConsulates;
-    await this.page.goto(`https://ais.usvisa-info.com/pt-br/niv/schedule/${visaGroupId}/appointment`, {
+    const { visaSystemLocation, visaGroupId } = this.config.workflows.getAvailableAppointmentConsulates;
+    await this.page.goto(`https://ais.usvisa-info.com/${visaSystemLocation}/niv/schedule/${visaGroupId}/appointment`, {
       waitUntil: 'networkidle0',
     });
   }

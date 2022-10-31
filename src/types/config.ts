@@ -7,6 +7,7 @@ export type Config = {
   workflows: {
     getAvailableAppointmentConsulates: {
       cronExpression: string;
+      visaSystemLocation: string;
       visaCredentialsEmail: string;
       visaCredentialsPassword: string;
       visaGroupId: string;

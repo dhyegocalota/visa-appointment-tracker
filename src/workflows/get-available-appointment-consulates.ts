@@ -23,6 +23,7 @@ export default class GetAvailableAppointmentConsulatesWorkflow extends Workflow<
       workflows: {
         getAvailableAppointmentConsulates: {
           cronExpression: '*/15 * * * *',
+          visaSystemLocation: 'en-br',
           visaMinAppointmentDate: dateFns.format(dateFns.startOfMonth(new Date()), 'yyyy-MM-dd'),
           visaMaxAppointmentDate: dateFns.format(dateFns.endOfMonth(new Date()), 'yyyy-MM-dd'),
           visaNotificationMessage:
