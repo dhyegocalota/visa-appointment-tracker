@@ -55,9 +55,10 @@ Take a look at the [Features](#features) section if you're interested about how 
 This Workflow searches for available scheduling dates according to your preferences on all facilities available in the country you scheduled your US Visa interview. It will call you through the Twilio API as soon as it finds an available date.
 
 #### Settings
-| Name | Type | Required | Default | Notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| Name | Type | Required | Default | Notes               |
 |---|---|---|---|---|
 | `cronExpression` | `String` | No | `*/15 * * * *` | • Make sure to use a valid Cron Expression<br>• Determines the interval that this Workflow will be executed<br>• We suggest building the [Crontab App](https://crontab.cronhub.io/)<br>• Intervals shorter than 15 minutes may get banned quickly |
+| `visaSystemLocation` | `String` | No | en-br | • US Visa Info System [supports](https://ais.usvisa-info.com/en-us/countries_list/niv) multiple locations and languages<br>• Keep the location lower-cased (e.g. `en-br`) |
 | `visaCredentialsEmail` | `String` | Yes |  | • Make sure to use a valid Email Address<br>• This is credentials email used for accessing your [US Visa Info's](https://ais.usvisa-info.com/) account |
 | `visaCredentialsPassword` | `String` | Yes |  | • This is credentials password used for accessing your [US Visa Info's](https://ais.usvisa-info.com/) account |
 | `visaGroupId` | `String` | Yes |  | • Follow our [instructions](#) to get your Visa Group ID |

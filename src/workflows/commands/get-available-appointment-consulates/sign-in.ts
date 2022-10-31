@@ -11,7 +11,8 @@ export default class SignInWorkflowCommand extends WorkflowCommand<GetAvailableA
   }
 
   async retryableExecute(): Promise<void> {
-    await this.page.goto(`https://ais.usvisa-info.com/pt-br/niv/users/sign_in`, {
+    const { visaSystemLocation } = this.config.workflows.getAvailableAppointmentConsulates;
+    await this.page.goto(`https://ais.usvisa-info.com/${visaSystemLocation}/niv/users/sign_in`, {
       waitUntil: 'networkidle0',
     });
 
