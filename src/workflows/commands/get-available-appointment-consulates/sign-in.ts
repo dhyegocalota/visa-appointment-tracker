@@ -20,12 +20,12 @@ export default class SignInWorkflowCommand extends WorkflowCommand<GetAvailableA
     const { visaCredentialsEmail, visaCredentialsPassword } = this.config.workflows.getAvailableAppointmentConsulates;
 
     await emailInputElement!.click();
-    await this.page.keyboard.type(visaCredentialsEmail, { delay: 25 });
+    await this.page.keyboard.type(visaCredentialsEmail, { delay: 50 });
 
     const passwordInputElement = await this.page.waitForSelector('#user_password');
 
     await passwordInputElement!.click();
-    await this.page.keyboard.type(visaCredentialsPassword, { delay: 25 });
+    await this.page.keyboard.type(visaCredentialsPassword, { delay: 50 });
 
     const policyAgreementInputElement = await this.page.waitForSelector('#policy_confirmed');
     await policyAgreementInputElement!.click();
