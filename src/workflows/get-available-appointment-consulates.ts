@@ -7,9 +7,7 @@ import RegisterWorkflow from '@/register-workflow';
 import {
   BuildAppointmentConsulatesWorkflowCommand,
   NotifyAvailableDatesWorkflowCommand,
-  SelectAppointmentMembersWorkflowCommand,
-  SelectGroupActionWorkflowCommand,
-  SelectGroupWorkflowCommand,
+  NavigateToGroupAppointmentWorkflowCommand,
   SignInWorkflowCommand,
 } from '@/workflows/commands';
 import { GetAvailableAppointmentConsulatesExecutionState } from '@/workflows/execution-states';
@@ -52,9 +50,7 @@ export default class GetAvailableAppointmentConsulatesWorkflow extends Workflow<
   }) {
     return [
       new SignInWorkflowCommand({ logger, config: this.config, page, executionState }),
-      new SelectGroupWorkflowCommand({ logger, config: this.config, page, executionState }),
-      new SelectGroupActionWorkflowCommand({ logger, config: this.config, page, executionState }),
-      new SelectAppointmentMembersWorkflowCommand({ logger, config: this.config, page, executionState }),
+      new NavigateToGroupAppointmentWorkflowCommand({ logger, config: this.config, page, executionState }),
       new BuildAppointmentConsulatesWorkflowCommand({ logger, config: this.config, page, executionState }),
       new NotifyAvailableDatesWorkflowCommand({ logger, config: this.config, page, executionState }),
     ];
