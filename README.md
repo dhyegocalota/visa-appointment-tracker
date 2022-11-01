@@ -40,7 +40,7 @@ For example, given the URL:
 
 `https://ais.usvisa-info.com/pt-br/niv/schedule/84746362/continue_actions`
 
-The Group ID is: `44257493`
+The Group ID is: `84746362`
 
 ## Setup
 1. Complete [Prerequisites](#prerequisites)
