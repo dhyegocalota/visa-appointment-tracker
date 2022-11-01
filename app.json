@@ -31,7 +31,7 @@
   "formation": {
     "cron": {
       "quantity": 1,
-      "size": "hobby"
+      "size": "free"
     }
   }
 }
